@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World - Calendar</title>
+
+		<!-- online mode -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <!-- offline mode -->
+    <!--
+    <script src="./libs/react@16.min.js"></script>
+    <script src="./libs/react-dom@16.min.js"></script>
+    <script src="./libs/babel-standalone@6.15.0.min.js"></script>
+  	-->
+
+    <style>
+    	section {
+    		display: grid;
+    		grid-template-columns: repeat(7, 1fr);
+    	}
+    	h1 {
+    		grid-column: 1 / span 7;
+    		text-align: center;
+    	}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+    	const month = Object.freeze([
+	    	'Jan',
+	    	'Feb',
+	    	'Mar',
+	    	'Apr',
+	    	'May',
+	    	'Jun',
+	    	'Jul',
+	    	'Aug',
+	    	'Sep',
+	    	'Oct',
+	    	'Nov',
+	    	'Dec'
+    	]);
+
+    const getLastDayOfMonth = (d) => {
+			const last = new Date(d.getTime());
+			last.setMonth(d.getMonth() + 1);
+			last.setDate(0);
+			return last
+  	}
+
+    const getDates = (d) => {
+			const end = getLastDayOfMonth(d).getDate();
+			const dates = [];
+			const currDate = new Date(d.getTime());
+			for (let i = 1; i <= end; i++) {
+				console.log('this is i', i);
+			 	currDate.setDate(i);
+				dates.push(<div style={{ gridColumn: currDate.getDay() }}>{i}</div>);
+			}
+			return dates;
+  	}
+
+		const Calendar = ({ date }) => (
+			<section>
+				<h1>{month[date.getMonth()]} {date.getFullYear()}</h1>
+				{getDates(date)}
+			</section>
+		);
+
+		ReactDOM.render(
+			<Calendar date={new Date()}/>,
+			document.getElementById('root')
+		);
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      To set up a production-ready React build environment, follow these instructions:
+      * https://reactjs.org/docs/add-react-to-a-new-app.html
+      * https://reactjs.org/docs/add-react-to-an-existing-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      * https://reactjs.org/docs/react-without-jsx.html
+      * https://reactjs.org/docs/cdn-links.html
+    -->
+  </body>
+</html>
