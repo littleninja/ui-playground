@@ -17,14 +17,10 @@
   	-->
 
     <style>
-    	section {
-    		display: grid;
-    		grid-template-columns: repeat(7, 1fr);
-    	}
-    	h1 {
-    		grid-column: 1 / span 7;
-    		text-align: center;
-    	}
+      table {
+        table-layout: fixed;
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -46,36 +42,57 @@
 	    	'Dec'
     	]);
 
-    const getLastDayOfMonth = (d) => {
-			const last = new Date(d.getTime());
-			last.setMonth(d.getMonth() + 1);
-			last.setDate(0);
-			return last
-  	}
+      const getLastDayOfMonth = (d) => {
+        const last = new Date(d.getTime());
+        last.setMonth(d.getMonth() + 1);
+        last.setDate(0);
+        return last
+      }
 
-    const getDates = (d) => {
-			const end = getLastDayOfMonth(d).getDate();
-			const dates = [];
-			const currDate = new Date(d.getTime());
-			for (let i = 1; i <= end; i++) {
-				console.log('this is i', i);
-			 	currDate.setDate(i);
-				dates.push(<div style={{ gridColumn: currDate.getDay() }}>{i}</div>);
-			}
-			return dates;
-  	}
+      const getDateTable = (date) => {
+        const end = getLastDayOfMonth(date).getDate();
+        const currDate = new Date(date.getTime());
+        const offset = date.getDay();
 
-		const Calendar = ({ date }) => (
-			<section>
-				<h1>{month[date.getMonth()]} {date.getFullYear()}</h1>
-				{getDates(date)}
-			</section>
-		);
+        const weeks = [];
+        let dates = []; 
+        let i;
 
-		ReactDOM.render(
-			<Calendar date={new Date()}/>,
-			document.getElementById('root')
-		);
+        // add filler cells for offset
+        for (i = 0; i < offset; i++) {
+          dates.push(<td></td>);
+        }
+
+        for (i = 1; i < end; i++) {
+          dates.push(<td>{i}</td>);
+          if (dates.length === 7) {
+            weeks.push(<tr>{dates}</tr>);
+            dates = [];
+          }
+        }
+
+        return weeks;
+      };
+
+  		const TableCalendar = ({ date }) => (
+  			<table>
+          <thead>
+            <tr>
+              <th colspan="7">
+                <h1>{month[date.getMonth()]} {date.getFullYear()}</h1>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {getDateTable(date)}
+          </tbody>
+  			</table>
+  		);
+
+  		ReactDOM.render(
+  			<TableCalendar date={new Date()}/>,
+  			document.getElementById('root')
+  		);
 
     </script>
     <!--
