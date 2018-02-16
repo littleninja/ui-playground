@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Hello World - Calendar</title>
 
-		<!-- online mode -->
+    <!-- online mode -->
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -14,7 +14,7 @@
     <script src="./libs/react@16.min.js"></script>
     <script src="./libs/react-dom@16.min.js"></script>
     <script src="./libs/babel-standalone@6.15.0.min.js"></script>
-  	-->
+    -->
 
     <style>
       table {
@@ -27,20 +27,20 @@
     <div id="root"></div>
     <script type="text/babel">
 
-    	const month = Object.freeze([
-	    	'Jan',
-	    	'Feb',
-	    	'Mar',
-	    	'Apr',
-	    	'May',
-	    	'Jun',
-	    	'Jul',
-	    	'Aug',
-	    	'Sep',
-	    	'Oct',
-	    	'Nov',
-	    	'Dec'
-    	]);
+      const month = Object.freeze([
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec'
+      ]);
 
       const getLastDayOfMonth = (d) => {
         const last = new Date(d.getTime());
@@ -74,8 +74,8 @@
         return weeks;
       };
 
-  		const TableCalendar = ({ date }) => (
-  			<table>
+      const TableCalendar = ({ date }) => (
+        <table>
           <thead>
             <tr>
               <th colspan="7">
@@ -86,13 +86,13 @@
           <tbody>
             {getDateTable(date)}
           </tbody>
-  			</table>
-  		);
+        </table>
+      );
 
-  		ReactDOM.render(
-  			<TableCalendar date={new Date()}/>,
-  			document.getElementById('root')
-  		);
+      ReactDOM.render(
+        <TableCalendar date={new Date()}/>,
+        document.getElementById('root')
+      );
 
     </script>
     <!--

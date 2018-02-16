@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Hello World - Calendar</title>
 
-		<!-- online mode -->
+    <!-- online mode -->
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -14,77 +14,77 @@
     <script src="./libs/react@16.min.js"></script>
     <script src="./libs/react-dom@16.min.js"></script>
     <script src="./libs/babel-standalone@6.15.0.min.js"></script>
-  	-->
+    -->
 
     <style>
-    	h1 {
-    		width: 100%;
-    		text-align: center;
-    	}
-    	ul {
-    		display: grid;
-    		grid-template-columns: repeat(7, 1fr);
-    		list-style: none outside none;
-    		padding: 0;
-    	}
-    	li {
-    		text-align: center;
-    	}
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+      ul {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        list-style: none outside none;
+        padding: 0;
+      }
+      li {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="text/babel">
 
-    	const month = Object.freeze([
-	    	'Jan',
-	    	'Feb',
-	    	'Mar',
-	    	'Apr',
-	    	'May',
-	    	'Jun',
-	    	'Jul',
-	    	'Aug',
-	    	'Sep',
-	    	'Oct',
-	    	'Nov',
-	    	'Dec'
-    	]);
+      const month = Object.freeze([
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec'
+      ]);
 
-	    const getLastDayOfMonth = (d) => {
-				const last = new Date(d.getTime());
-				last.setMonth(d.getMonth() + 1);
-				last.setDate(0);
-				return last
-	  	}
+      const getLastDayOfMonth = (d) => {
+        const last = new Date(d.getTime());
+        last.setMonth(d.getMonth() + 1);
+        last.setDate(0);
+        return last
+      }
 
-	    const getDateGrid = (d) => {
-				const end = getLastDayOfMonth(d).getDate();
-				const dates = [];
-				const currDate = new Date(d.getTime());
-				for (let i = 1; i <= end; i++) {
-				 	currDate.setDate(i);
-				 	if (i === 1) {
-						dates.push(<li style={{ gridColumn: `${currDate.getDay()}` }}>{i}</li>);
-				 	}
-				 	else {
-				 	  dates.push(<li>{i}</li>)
-				  }
-				}
-				return (<ul>{dates}</ul>);
-	  	}
+      const getDateGrid = (d) => {
+        const end = getLastDayOfMonth(d).getDate();
+        const dates = [];
+        const currDate = new Date(d.getTime());
+        for (let i = 1; i <= end; i++) {
+          currDate.setDate(i);
+          if (i === 1) {
+            dates.push(<li style={{ gridColumn: `${currDate.getDay()}` }}>{i}</li>);
+          }
+          else {
+            dates.push(<li>{i}</li>)
+          }
+        }
+        return (<ul>{dates}</ul>);
+      }
 
-			const GridCalendar = ({ date }) => (
-				<section>
-					<h1>{month[date.getMonth()]} {date.getFullYear()}</h1>
-					{getDateGrid(date)}
-				</section>
-			);
+      const GridCalendar = ({ date }) => (
+        <section>
+          <h1>{month[date.getMonth()]} {date.getFullYear()}</h1>
+          {getDateGrid(date)}
+        </section>
+      );
 
-			ReactDOM.render(
-				<GridCalendar date={new Date()}/>,
-				document.getElementById('root')
-			);
+      ReactDOM.render(
+        <GridCalendar date={new Date()}/>,
+        document.getElementById('root')
+      );
 
     </script>
     <!--
