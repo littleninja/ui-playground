@@ -59,17 +59,19 @@
         let i;
 
         // add filler cells for offset
-        for (i = 0; i < offset; i++) {
-          dates.push(<td></td>);
+        for (i = 1; i < offset; i++) {
+          dates.push(<td key={`offset-${i}`}></td>);
         }
 
         for (i = 1; i < end; i++) {
-          dates.push(<td>{i}</td>);
+          dates.push(<td key={`date-${i}`}>{i}</td>);
           if (dates.length === 7) {
-            weeks.push(<tr>{dates}</tr>);
+            weeks.push(<tr key={`week-${Math.ceil((i + offset) / 7) }`}>{dates}</tr>);
             dates = [];
           }
         }
+
+        weeks.push(dates);
 
         return weeks;
       };
@@ -78,7 +80,7 @@
         <table>
           <thead>
             <tr>
-              <th colspan="7">
+              <th colSpan="7">
                 <h1>{month[date.getMonth()]} {date.getFullYear()}</h1>
               </th>
             </tr>
