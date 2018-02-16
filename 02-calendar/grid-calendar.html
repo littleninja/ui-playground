@@ -60,17 +60,14 @@
 
       const getDateGrid = (d) => {
         const end = getLastDayOfMonth(d).getDate();
-        const dates = [];
         const currDate = new Date(d.getTime());
-        for (let i = 1; i <= end; i++) {
-          currDate.setDate(i);
-          if (i === 1) {
-            dates.push(<li style={{ gridColumn: `${currDate.getDay()}` }}>{i}</li>);
-          }
-          else {
-            dates.push(<li>{i}</li>)
-          }
+        currDate.setDate(1);
+        const dates = [<li style={{ gridColumn: `${currDate.getDay() + 1}` }}>1</li>];
+
+        for (let i = 2; i <= end; i++) {
+          dates.push(<li>{i}</li>);
         }
+
         return (<ul>{dates}</ul>);
       }
 
