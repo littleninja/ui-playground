@@ -13,7 +13,7 @@ MDN describes it as a "one-dimensional layout" of items in a container.
 Our two-dimensional layout.
 
 
-
+- - -
 
 // ... TODO: Deprecate content below (except resources)? Simplify this--what do I need to know to get running?
 
@@ -74,13 +74,15 @@ On the items, we can:
 
 ## 4: Oh yeah, Browser Support ##
 
+- - -
+
 ## 5. Resources ##
 
-The MDN docs:
+Mozilla Developer Network (MDN) for comprehensive docs and some examples:
 - [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 - [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
 
-[CanIUse.com to check feature compatibility](https://caniuse.com)
+[CanIUse.com](https://caniuse.com) to check feature compatibility. MDN usually puts specification and browser support at the bottom of the page, too. Can you tell I love MDN?
 
 Jen Simmons publishes new videos each Tuesday and Thursday on her channel, [Layout Land](https://www.youtube.com/layoutland)
 
