@@ -1,0 +1,138 @@
+<!doctype html>
+<html dir="ltr" lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Grid demo</title>
+
+        <style>
+            body {
+                margin: 0;
+            }
+
+            main {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="header">
+                <h1>Your upcoming trips</h1>
+                <button>+ Add an upcoming trip</button>
+            </div>
+            <section class="trip trip--upcoming">
+                <div class="trip__destination">
+                    <h2>Los Angeles LAX + Portland PDX</h2>
+                    <img src="pdx.png" alt="Icon for Portland PDX" />
+                    <div>Fri Dec 22</div>
+                </div>
+                <div class="trip__details--upcoming">
+                    <h3>Travelers</h3>
+                    <div>Amanda, Matthew, Vicki, and Troy</div>
+                    <hr/>
+                    <h3>Confirmation</h3>
+                    <div>QUDRTG</div>
+                    <hr/>
+                    <h3>Mileage Plan</h3>
+                    <div>You'll earn 1,394 miles</div>
+                    <button>Check in</button>
+                    <div>
+                        <a href="#details">Trip details</a> | 
+                        <a href="#seats">Seats</a> | 
+                        <a href="#change">Change</a> | 
+                        <a href="#cancel">Cancel</a>
+                    </div>
+                </div>
+            </section>
+            <section class="trip trip--upcoming">
+                <div class="trip__destination">
+                    <h2>Puerto Vallarta PVR + Washington DC DCA</h2>
+                    <img src="pvr.png" alt="Icon for Puerto Vallarta PVR" />
+                    <div>Tues Jan 27 - Thurs Jan 29</div>
+                </div>
+                <div class="trip__details--upcoming">
+                    <h3>Travelers</h3>
+                    <div>Amanda, Matthew, Vicki, Troy +2</div>
+                    <hr/>
+                    <h3>Confirmation</h3>
+                    <div>DKWDWF</div>
+                    <hr/>
+                    <h3>Mileage Plan</h3>
+                    <div>You'll earn 25,000 miles</div>
+                    <div>
+                        <a href="#details">Trip details</a> | 
+                        <a href="#seats">Seats</a> | 
+                        <a href="#change">Change</a> | 
+                        <a href="#cancel">Cancel</a>
+                    </div>
+                </div>
+            </section>
+            <section class="trip trip--upcoming">
+                <div class="trip__destination">
+                    <h2>Los Angeles + San Francisco SFO</h2>
+                    <img src="sfo.png" alt="Icon for San Francisco SFO" />
+                    <div>+4 more flights</div>
+                    <div>Mon Feb 19 - Thurs Feb 22</div>
+                </div>
+                <div class="trip__details--upcoming">
+                    <h3>Traveler</h3>
+                    <div>Bethany</div>
+                    <hr/>
+                    <h3>Confirmation</h3>
+                    <div>FWDGRT</div>
+                    <hr/>
+                    <h3>Mileage Plan</h3>
+                    <div>You'll earn 3,592 miles</div>
+                    <div>
+                        <a href="#details">Trip details</a> | 
+                        <a href="#seats">Seats</a> | 
+                        <a href="#change">Change</a> | 
+                        <a href="#cancel">Cancel</a>
+                    </div>
+                </div>
+            </section>
+            <div class="header">
+                <h1>Past trips</h1>
+                <button>+ Add a past trip</button>
+            </div>
+            <section class="trip trip--past">
+                <div>View trips from <select value="2017"><option value="2017">2017</option></select></div>
+                <div class="trip__details--past">
+                    <h2>LAX + PDX</h2>
+                    <h3>Los Angeles to Portland</h3>
+                    <div>
+                        <a href="#receipt">View receipt</a> | 
+                        <a href="#bookagain">Book again</a>
+                    </div>
+                    <div>Thurs Nov 23, 2017</div>
+                    <div>Amanda, Matthew, Vicki, and Troy</div>
+                    <div>You earned 2,391 miles</div>
+                </div>
+                <div class="trip__details--past">
+                    <h2>PDX + SFO</h2>
+                    <h3>Portland to San Francisco</h3>
+                    <div>
+                        <a href="#receipt">View receipt</a> | 
+                        <a href="#bookagain">Book again</a>
+                    </div>
+                    <div>Mon Oct 1 - Wed Oct 3, 2017</div>
+                    <div>Amanda, Matthew, Vicki, and Troy</div>
+                    <div>You used 2,391 miles </div>
+                </div>
+                <div class="trip__details--past">
+                    <h2>LAX + PDX</h2>
+                    <h3>Los Angeles to Portland, +4 more flights</h3>
+                    <div>
+                        <a href="#receipt">View receipt</a> | 
+                        <a href="#bookagain">Book again</a>
+                    </div>
+                    <div>Tues Sep 1 - Tues Sep 7, 2017</div>
+                    <div>Amanda, Mattew, Vicki, and Troy</div>
+                    <div>You earned 5,391 miles</div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
