@@ -1,0 +1,14 @@
+{
+  "name": "proto-js-storage",
+  "version": "1.0.0",
+  "description": "Prototype storage and publish-subscribe in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Not implemented"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mobx": "^5.1.0"
+  }
+}
