@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "jsxFactory": "h"
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+    ]
+}
