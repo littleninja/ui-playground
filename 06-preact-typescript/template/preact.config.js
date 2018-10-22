@@ -5,5 +5,5 @@ export default (config, env, helpers) => {
   if (!extensions.includes('.tsx')) extensions.push('.tsx');
 
   // dirty hack to replace babel-loader with ts-loader
-  config.module.rules[0] = { test: /\.tsx?$/, loader: "awesome-typescript-loader" };
+  config.module.rules[0] = { test: /\.tsx?$/, loader: "ts-loader" };
 };
