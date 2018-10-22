@@ -1,11 +1,9 @@
 export default (config, env, helpers) => {
-    // delete config.entry.polyfills;
-    // config.output.filename = "[name].js";
-  
-    // let { plugin } = helpers.getPluginsByName(config, "ExtractTextPlugin")[0];
-    // plugin.options.disable = true;
-  
-    // if (env.production) {
-    //   config.output.libraryTarget = "umd";
-    // }
-  };
+  // make sure .ts and .tsx file extensions are included
+  const extensions = config.resolve.extensions;
+  if (!extensions.includes('.ts')) extensions.push('.ts');
+  if (!extensions.includes('.tsx')) extensions.push('.tsx');
+
+  // dirty hack to replace babel-loader with ts-loader
+  config.module.rules[0] = { test: /\.tsx?$/, loader: "awesome-typescript-loader" };
+};
