@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "preact build --clean"
+    "build": "preact build --clean",
+    "lint": "tslint --project tsconfig.json",
+    "serve": "preact serve"
   },
   "dependencies": {
     "preact": "^8.3.1",
@@ -13,6 +15,7 @@
   "devDependencies": {
     "preact-cli": "^3.0.0-next.14",
     "ts-loader": "^5.2.2",
+    "tslint": "^5.11.0",
     "typescript": "^3.1.3"
   }
 }
