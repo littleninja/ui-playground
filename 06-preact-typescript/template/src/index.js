@@ -1,11 +1,5 @@
-import { h } from "preact";
-import habitat from "preact-habitat";
+import { h, render } from "preact";
 
 import Widget from "./widget";
 
-let _habitat = habitat(Widget);
-
-_habitat.render({
-  selector: '[data-widget-host="habitat"]',
-  clean: true
-});
+render(<Widget />, document.getElementById('container'));
