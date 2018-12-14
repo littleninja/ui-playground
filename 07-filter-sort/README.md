@@ -12,4 +12,8 @@ Secondary goals aimed to, if not writing the tests, at least making the new code
 
 ## Progress
 
+- 2018-12-13: Add sort order as data attribute to each result item. Write a basic method that given a result identifier (index) and sorting category, gets and sorts the items then appends them back into the results in sorted order. Started building a sort control. Next steps: Add sort controls with change handlers to each of the result sets so that results can be sorted independently.
+
+- 2018-12-12: Create a spreadsheet with departure and arrival times and prices, use it to build sort order for each.
+
 - 2018-12-10: Begin with the basics, just a couple HTML files with their style and legacy Javascript references to get started. Created an example for one-way and round-trip flights. One interesting twist was a functional change that brought separate controls for round-trip flights into a single global control. Next steps: add data attributes to markup and basic sort implementation.

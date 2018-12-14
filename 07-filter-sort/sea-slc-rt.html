@@ -7,99 +7,109 @@
     </head>
     <body>
         <main>
-            <section>
-                <h1>Choose your departing flight</h1>
-                <h2>From Seattle, WA (SEA) to Salt Lake City, UT (SLC)</h2>
-                <ul class="results">
+                <section>
+                    <h1>Choose your departing flight</h1>
+                    <h2>From Seattle, WA (SEA) to Salt Lake City, UT (SLC)</h2>
     
-                    <li class="result">
-                        AlaskaBear Flight 966<br>
-                        SEA (5:15 am) -> SLC (8:16 am)<br>
-                        Nonstop, 2h 1m<br>
-                        <div class="prices">
-                            <button class="price">Main ($116)</button>
-                            <button class="price">First ($263)</button>
-                        </div>
-                    </li>
+                    <details>
+                        <summary>Sort</summary>
+                        <select data-results-index="0">
+                            <option value="sort-price">Price (Lowest)</option>
+                            <option value="sort-departing">Departure time</option>
+                            <option value="sort-arriving">Arrival time</option>
+                        </select>
+                    </details>
     
-                    <li class="result">
-                        AlaskaBear Flight 718<br>
-                        SEA (1:35 pm) -> SLC (4:35 pm)<br>
-                        Nonstop, 2h 0m<br>
-                        <div class="prices">
-                            <button class="price">Main ($201)</button>
-                            <button class="price">First ($263)</button>
-                        </div>
-                    </li>
-    
-                    <li class="result">
-                        AlaskaBear Flight 722<br>
-                        SEA (5:17 pm) -> SLC (8:16 pm)<br>
-                        Nonstop, 1h 59m<br>
-                        <div class="prices">
-                            <button class="price">Main ($161)</button>
-                            <button class="price">First ($263)</button>
-                        </div>
-                    </li>
-    
-                    <li class="result">
-                        AlaskaBear 2 flights*<br>
-                        SEA (5:00 am) -> SLC (1:05 pm)<br>
-                        * Includes flights operated by other airlines.<br>
-                        <div class="prices">
-                            <button class="price">Main ($329)</button>
-                            <button class="price">First ($455)</button>
-                        </div>
-                    </li>
-    
-                    <li class="result">
-                        AlaskaBear 2 flights*<br>
-                        SEA (11:40 am) -> SLC (7:50 pm)<br>
-                        * Includes flights operated by other airlines.<br>
-                        <div class="prices">
-                            <button class="price">Main ($315)</button>
-                            <button class="price">First ($385)</button>
-                        </div>
-                    </li>
-    
-                    <li class="result">
-                        AlaskaBear 2 flights*<br>
-                        SEA (2:10 pm) -> SLC (9:14 pm)<br>
-                        * Includes flights operated by other airlines.<br>
-                        <div class="prices">
-                            <button class="price">Main ($379)</button>
-                            <button class="price disabled">First -</button>
-                        </div>
-                    </li>
-    
-                    <li class="result">
-                        AlaskaBear 2 flights*<br>
-                        SEA (4:30 pm) -> SLC (11:45 pm)<br>
-                        * Includes flights operated by other airlines.<br>
-                        <div class="prices">
-                            <button class="price">Main ($249)</button>
-                            <button class="price disabled">First ($319)</button>
-                        </div>
-                    </li>
-    
-                    <li class="result">
-                        AlaskaBear 2 flights*<br>
-                        SEA (7:30 pm) -> SLC (11:45 pm)<br>
-                        * Includes flights operated by other airlines.<br>
-                        <div class="prices">
-                            <button class="price">Main ($249)</button>
-                            <button class="price disabled">First ($319)</button>
-                        </div>
-                    </li>
-    
-                </ul>
-            </section>
+                    <ul id="results-0" class="results">
+        
+                        <li class="result" data-sort-departing="1" data-sort-arriving="0" data-sort-price="0">
+                            AlaskaBear Flight 966<br>
+                            SEA (5:15 am) -> SLC (8:16 am)<br>
+                            Nonstop, 2h 1m<br>
+                            <div class="prices">
+                                <button class="price">Main ($116)</button>
+                                <button class="price">First ($263)</button>
+                            </div>
+                        </li>
+        
+                        <li class="result" data-sort-departing="3" data-sort-arriving="2" data-sort-price="2">
+                            AlaskaBear Flight 718<br>
+                            SEA (1:35 pm) -> SLC (4:35 pm)<br>
+                            Nonstop, 2h 0m<br>
+                            <div class="prices">
+                                <button class="price">Main ($201)</button>
+                                <button class="price">First ($263)</button>
+                            </div>
+                        </li>
+        
+                        <li class="result" data-sort-departing="6" data-sort-arriving="4" data-sort-price="1">
+                            AlaskaBear Flight 722<br>
+                            SEA (5:17 pm) -> SLC (8:16 pm)<br>
+                            Nonstop, 1h 59m<br>
+                            <div class="prices">
+                                <button class="price">Main ($161)</button>
+                                <button class="price">First ($263)</button>
+                            </div>
+                        </li>
+        
+                        <li class="result" data-sort-departing="0" data-sort-arriving="1" data-sort-price="6">
+                            AlaskaBear 2 flights*<br>
+                            SEA (5:00 am) -> SLC (1:05 pm)<br>
+                            * Includes flights operated by other airlines.<br>
+                            <div class="prices">
+                                <button class="price">Main ($329)</button>
+                                <button class="price">First ($455)</button>
+                            </div>
+                        </li>
+        
+                        <li class="result" data-sort-departing="2" data-sort-arriving="3" data-sort-price="5">
+                            AlaskaBear 2 flights*<br>
+                            SEA (11:40 am) -> SLC (7:50 pm)<br>
+                            * Includes flights operated by other airlines.<br>
+                            <div class="prices">
+                                <button class="price">Main ($315)</button>
+                                <button class="price">First ($385)</button>
+                            </div>
+                        </li>
+        
+                        <li class="result" data-sort-departing="4" data-sort-arriving="5" data-sort-price="7">
+                            AlaskaBear 2 flights*<br>
+                            SEA (2:10 pm) -> SLC (9:14 pm)<br>
+                            * Includes flights operated by other airlines.<br>
+                            <div class="prices">
+                                <button class="price">Main ($379)</button>
+                                <button class="price disabled">First -</button>
+                            </div>
+                        </li>
+        
+                        <li class="result" data-sort-departing="5" data-sort-arriving="6" data-sort-price="3">
+                            AlaskaBear 2 flights*<br>
+                            SEA (4:30 pm) -> SLC (11:45 pm)<br>
+                            * Includes flights operated by other airlines.<br>
+                            <div class="prices">
+                                <button class="price">Main ($249)</button>
+                                <button class="price disabled">First ($319)</button>
+                            </div>
+                        </li>
+        
+                        <li class="result" data-sort-departing="7" data-sort-arriving="7" data-sort-price="4">
+                            AlaskaBear 2 flights*<br>
+                            SEA (7:30 pm) -> SLC (11:45 pm)<br>
+                            * Includes flights operated by other airlines.<br>
+                            <div class="prices">
+                                <button class="price">Main ($249)</button>
+                                <button class="price disabled">First ($319)</button>
+                            </div>
+                        </li>
+        
+                    </ul>
+                </section>
             <section>
                 <h1>Choose your returning flight</h1>
                 <h2>From Salt Lake City, UT (SLC) to Seattle, WA (SEA)</h2>
-                <ul class="results">
+                <ul id="results-1" class="results">
     
-                    <li class="result">
+                    <li class="result" data-sort-departing="3" data-sort-arriving="0" data-sort-price="0">
                         AlaskaBear Flight 761<br>
                         SLC (7:20 am) -> SEA (8:43 am)<br>
                         Nonstop, 2h 23m<br>
@@ -109,7 +119,7 @@
                         </div>
                     </li>
 
-                    <li class="result">
+                    <li class="result" data-sort-departing="4" data-sort-arriving="2" data-sort-price="1">
                         AlaskaBear Flight 717<br>
                         SLC (9:15 am) -> SEA (10:35 am)<br>
                         Nonstop, 2h 20m<br>
@@ -119,7 +129,7 @@
                         </div>
                     </li>
 
-                    <li class="result">
+                    <li class="result" data-sort-departing="8" data-sort-arriving="8" data-sort-price="4">
                         AlaskaBear Flight 719<br>
                         SLC (9:15 pm) -> SEA (10:30 pm)<br>
                         Nonstop, 2h 15m<br>
@@ -129,7 +139,7 @@
                         </div>
                     </li>
 
-                    <li class="result">
+                    <li class="result" data-sort-departing="0" data-sort-arriving="1" data-sort-price="3">
                         AlaskaBear 2 flights*<br>
                         SLC (7:00 am) -> SEA (10:15 am)<br>
                         * Includes flights operated by other airlines.<br>
@@ -139,7 +149,7 @@
                         </div>
                     </li>
 
-                    <li class="result">
+                    <li class="result" data-sort-departing="1" data-sort-arriving="3" data-sort-price="5">
                         AlaskaBear 2 flights*<br>
                         SLC (7:00 am) -> SEA (10:45 am)<br>
                         * Includes flights operated by other airlines.<br>
@@ -149,7 +159,7 @@
                         </div>
                     </li>
 
-                    <li class="result">
+                    <li class="result" data-sort-departing="2" data-sort-arriving="4" data-sort-price="6">
                         AlaskaBear 2 flights*<br>
                         SLC (7:00 am) -> SEA (1:46 pm)<br>
                         * Includes flights operated by other airlines.<br>
@@ -159,7 +169,7 @@
                         </div>
                     </li>
 
-                    <li class="result">
+                    <li class="result" data-sort-departing="5" data-sort-arriving="5" data-sort-price="7">
                         AlaskaBear 2 flights*<br>
                         SLC (1:50 pm) -> SEA (5:05 pm)<br>
                         * Includes flights operated by other airlines.<br>
@@ -169,7 +179,7 @@
                         </div>
                     </li>
 
-                    <li class="result">
+                    <li class="result" data-sort-departing="6" data-sort-arriving="6" data-sort-price="8">
                         AlaskaBear 2 flights*<br>
                         SLC (1:50 pm) -> SEA (8:19 pm)<br>
                         * Includes flights operated by other airlines.<br>
@@ -179,7 +189,7 @@
                         </div>
                     </li>
 
-                    <li class="result">
+                    <li class="result" data-sort-departing="7" data-sort-arriving="7" data-sort-price="2">
                         AlaskaBear 2 flights*<br>
                         SLC (6:35 pm) -> SEA (10:24 pm)<br>
                         * Includes flights operated by other airlines.<br>
