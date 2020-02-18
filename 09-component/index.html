@@ -1,0 +1,28 @@
+<html>
+  <head>
+      <script>
+          const template = document.createElement('template');
+          template.innerHTML = `
+            <style> 
+              p {
+                color: blue;
+                font-weight: bold;
+              }
+            </style>
+            <p>Hello world</p>
+          `;
+          class AutoComplete extends HTMLElement {
+          constructor() {
+            super();
+            this.attachShadow({mode: 'open'});
+            this.shadowRoot.appendChild(template.content.cloneNode(true));
+            }
+          }
+
+          window.customElements.define('auto-complete', AutoComplete);`
+        </script>
+  </head>
+  <body>
+      <auto-complete></auto-complete>
+  </body>
+</html>

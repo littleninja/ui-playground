@@ -43,25 +43,25 @@ function revisedGetSundays() {
 }
 
 // get sundays for the next three months
-// based on months: 3 months (inclusive)
+// based on months: 3 months out from current month (inclusive)
 function revisedGetSundays2() {
 
-    const date = new Date();
-
+    const date = new Date('2018-05-10');
+    const startMonth = date.getMonth();
     const sundays = [];
     
     // zoom up to first Sunday
     date.setDate(date.getDate() + 7 - date.getDay());
-    
-    sundays.push(new Date(date.getTime()));
 
-    // get remaining 8 upcoming sundays
-    for (let i = 0; i < 11; i++) {
-        date.setDate(date.getDate() + 7);
+    // get remaining sundays while we're not more than 3 months out
+    // use mod operator for going around year-end
+    while ((12 - startMonth + date.getMonth()) % 12 < 3) {
         sundays.push(new Date(date.getTime()));
+        date.setDate(date.getDate() + 7);
     }
 
     return sundays;
 }
 
-console.log(revisedGetSundays());
+
+console.log(revisedGetSundays2());

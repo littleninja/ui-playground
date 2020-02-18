@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello sockets</title>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+  </head>
+  <body>
+    <h1>Make it memorable. Embrace the awkward.</h1>
+    <h2>Backstory</h2>
+    <p>One year for Christmas, our family traveled to share a cabin in the California mountains. My sister and I began thinking through all the usual antics when we had a thought--create a bingo board with all the things we thought might happen, first one to connect five wins. The result was a blast so I built a way to share it.</p>
+    <p>I feel I must caution: don't be hurtful. Be kind. And definitely included squares for yourself, it'll humble you. Making the list revisited holiday memories, searching for squares immersed us in the present. We kept our game discrete and were mindful (empathetic) to how people we loved would feel about seeing this.</p>
+    <h2>Instructions</h2>
+    <p>Get started by making a list. If it's Christmas, check it twice. Your list needs to have at least 24 items, feel free to go beyond that number.</p>
+    <p>Do you need some examples to get started? My sister and I brainstormed our list thinking about the antics at past holiday get-togethers. My sister thinks she's the brunt of sarcasm, so she predicted things like getting into a political debate with my dad and being blamed for leaving behind a mess. One of mine was coming up with an unnecessarily complex solution to a simple problem (and we got that one). Find a balance between being specific and inclusive.</p>
+    <section id="game">
+        <form>
+          <label>List at least 24 predictions, one per line.
+            <textarea v-model="tileInput">{{ tileInput }}</textarea>
+          </label>
+          <button>Create Board</button>
+          <button>Start Game</button>
+        </form>
+    </section>
+    <script src="game.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+    </script> -->
+  </body>
+</html>

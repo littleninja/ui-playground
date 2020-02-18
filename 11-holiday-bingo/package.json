@@ -1,0 +1,22 @@
+{
+  "name": "holiday-bingo",
+  "version": "1.0.0",
+  "description": "Simple bingo builder for holidays and awkward family gatherings",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "family",
+    "bingo",
+    "game",
+    "holiday"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
